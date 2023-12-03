@@ -1,0 +1,19 @@
+/* Tipo booleano */
+$media: true;
+/* Tipo map */
+$set-colori: (grigio: #ccc, blu: #00F);
+/* Tipo stringa */
+$colore: cyan;
+/* Tipo numero */
+$size: 1.5em;
+$fontArial: Arial, Helvetica, sans-serif;
+
+
+html {
+    font-size: $size;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@import '_header';
+@import '_main';
+@import '_footer';

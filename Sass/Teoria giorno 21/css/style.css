@@ -1,0 +1,71 @@
+/* Tipo booleano */
+/* Tipo map */
+/* Tipo stringa */
+/* Tipo numero */
+html {
+  font-size: 1.5em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Codice CSS per Header */
+header p {
+  text-align: center;
+}
+
+/* Codice per Main */
+/* CLASSICO */
+/* main {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main p {
+    text-align: center;
+    color: red;
+}
+
+main a:hover {
+    background-color: violet;
+} */
+/* NESTING con annidamento */
+main {
+  border: 1px solid black;
+  padding: 10px;
+  background-color: lightgrey;
+  /*a:hover {
+      background-color: violet;
+  }*/
+}
+main a {
+  text-decoration: none;
+}
+main a:hover {
+  background-color: violet;
+}
+main p {
+  /* text-align: center;
+  color: red; */
+  text-align: left;
+  color: blue;
+  font-size: 1.2em;
+}
+main span {
+  font-weight: bold;
+  color: seagreen;
+}
+main h1 {
+  /* text-align: center;
+  color: red; */
+  text-align: center;
+  color: green;
+  text-decoration: underline;
+}
+
+/*  Codice per Footer */
+footer p {
+  text-align: right;
+}/*# sourceMappingURL=style.css.map */

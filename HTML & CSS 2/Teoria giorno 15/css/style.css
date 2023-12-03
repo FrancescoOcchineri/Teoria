@@ -1,0 +1,78 @@
+/* Mobile first */
+
+.container {
+    background-color: #eee;
+}
+
+.container h1 {
+    color: red;
+}
+
+.container img {
+    width: 100%;
+}
+
+/*Small devices (landscape phones, 576px and up) */
+@media screen and (min-width: 576px) and (max-width: 767px) { 
+    .container {
+        background-color: #4b0000;              /* Quando arriva a 576px cambia colore */
+    } 
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991px) { 
+    .container {
+        background-color: #004b25;              /* Quando arriva a 768px cambia colore */
+    } 
+
+    .container img {
+        width: 80%;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        background-color: rgb(73, 109, 202);              /* Quando arriva a 992px cambia colore */
+    } 
+
+    .container img {
+        width: 60%;
+    }
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399px) { 
+    .container {
+        background-color: #bd39cc;              /* Quando arriva a 1200px cambia colore */
+    } 
+
+    .container img {
+        width: 50%;
+    }
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+    .container {
+        background-color: bisque;              /* Quando arriva a 1400px cambia colore */
+    } 
+
+    .container img {
+        width: 30%;
+    }
+}
+
+/* Print */
+@media print {
+    .container {
+        background-color: #fff;              /* Quando arriva a 1400px cambia colore */
+        border: 1px solid black;
+    } 
+
+    .container img {
+        display: none;
+    }
+}
+
+

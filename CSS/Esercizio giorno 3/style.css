@@ -1,0 +1,30 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+}
+
+header {
+    text-align: center;
+}
+
+header p {
+    background-color: rgb(205, 205, 162);
+}
+
+header img {
+ width: 200px;
+}
+
+article h1 {
+    text-align: center;
+}
+
+header hr {
+    color: gold;
+}
+
+section.ingredients p, section.method p:first:child {
+    font-weight: bold;
+}
+
+

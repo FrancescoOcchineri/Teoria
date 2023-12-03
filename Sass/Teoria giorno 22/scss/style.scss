@@ -1,0 +1,61 @@
+/* Style scss */
+@import 'reset';
+@import 'colori';
+@import 'mixin-generici';
+@import 'function';
+@import 'variables';
+
+html {
+    font-size: $rootSize;
+}
+
+body {
+    background-color: $light-color-primary;
+    h1 {
+        color: $darken-color-primary;
+        text-align: center;
+        text-transform: uppercase;
+        @media screen and (min-width: $tablet) {
+            text-transform: capitalize;
+        }
+        @media screen and (min-width: $desktop) {
+            text-align: right;
+        }
+    }
+
+    h2{
+        @extend h1;
+        text-decoration: underline;  
+    }
+
+    p {
+        @include nomeMixin();
+        @include paramMixin(1.3em, normal);
+        @media screen and (min-width: $tablet) {
+            text-align: justify;
+            text-decoration: line-through;
+        }
+        @media screen and (min-width: $desktop) {
+            text-align: center;
+            text-decoration: overline;
+        }
+    }
+
+    div.img {
+        width: pxToEm(250px, 16px);
+        height: pxToEm(180px, 16px);
+        // background-image: url('../img/bootstrap-stack.png');
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        @include backGMixin("image", url("../img/bootstrap-stack.png"));
+    }
+}
+
+footer {
+    @include backGMixin("color", $darken-color-primary);
+    h3 {
+        @include nomeMixin();
+        @include paramMixin(2.5em, lighter);
+        text-decoration: underline;
+    }
+}

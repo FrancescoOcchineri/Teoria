@@ -1,0 +1,88 @@
+/* CSS Transform 2D */
+/* CSS Transform 3D */
+
+.container {
+    width: 70%;
+    margin: auto;
+    background: lightcyan;
+    border: 1px solid blue;
+}
+
+.box1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border: 2px solid black;
+
+    /* TRANSLATE */
+
+    /* transform: translateX(50px); */
+    /* transform: translateY(50px); */
+    /* transform: translate(50px, 50px); */
+    /* transform: translateZ(50px);
+    /* transform: translate3d(50px, 50px, 50px) */
+
+    /* ROTATE */
+
+    /* transform: rotateX(50deg); */
+    /* transform: rotateY(50deg); */
+    /* transform: rotateZ(50deg); */
+    /* transform: rotate3d(1, 1, 1, 50deg); */
+
+    /* SCALE */
+
+    /* transform: scaleX(2); */ 
+    /* tranSform: scaleY(2); */
+    /* transform: scale(2); */
+    /* transform: scaleZ(2); */
+    /* transform: scale3d(1.5, 1.5, 1.5); */
+
+    /* SKEW */
+
+    /* transform: skewX(25deg); */
+    /* transform: skewY(25deg); */
+    /* transform: skew(25deg, 25deg) */
+
+    /* MATRIX */
+
+    /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+    /* transform: matrix(1.2, 0.2, -1, 0.9, 0, 20); */
+
+    /* transition-property: transform; */
+    /* transition-duration: 2500ms;   2.5s in secondi */
+    /* transition-timing-function: ease-in-out */
+    /* transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+    /* transition-delay: 1000ms; */
+
+    /* property name | duration| easing function | delay */
+    /* transition: width 2500ms ease-in-out 1s; */
+
+    /* Transizioni multiple */
+    /* transition: transform 2500ms ease-in-out 1s, background-color 2500ms ease-in-out 1s; */
+}
+
+.box1:hover {
+    /* width: 600px; */
+    transform: scale3d(1.5, 1.5, 1.5);
+    background-color: rgb(4, 85, 85);
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(136, 255, 0);
+    border: 2px solid black;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: miaFunc 2500ms ease-in-out 0.5s 2 alternate;
+    -moz-animation: miaFunc 2500ms ease-in-out 0.5s 2 alternate;    /* Compatibilità per Firefox */
+    -webkit-animation: miaFunc 2500ms ease-in-out 0.5s 2 alternate; /* Compatibilità per Chrome, Safari, iOS, Android */
+    -o-animation: miaFunc 2500ms ease-in-out 0.5s 2 alternate;      /* Compatibilità per Opera */
+}
+
+@keyframes miaFunc {
+    from {transform: scale3d(1, 1, 1); background-color: blueviolet;}
+    25% {transform: scale3d(1.4, 1.4, 1.4)}
+    50% {transform: scale3d(1.5, 1.5, 1.5); background-color: brown;}
+    75% {transform: scale3d(1.8, 1.8, 1.8)}
+    to {transform: scale3d(2.5, 2.5, 2.5); background-color: rgb(190, 220, 20);}
+}

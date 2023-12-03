@@ -1,0 +1,95 @@
+.box {
+    width: 400px;
+    font-size: 2em;
+}
+
+.box:nth-child(1) {
+    background-color: brown;
+    border: 1px solid green;
+    min-height: 200px;
+    order: 2;  /* Default 0 */
+    flex-grow: 1;  /* Default 1 */
+    flex-shrink: 1;  /* Default 1 */
+    flex-basis: 50%;    /* Default auto */
+}
+
+.box:nth-child(2) {
+    background-color: rgb(138, 165, 42);
+    border: 1px solid rgb(0, 119, 128);
+    min-height: 200px;
+    order: -4; 
+    flex-grow: 1;
+    flex-shrink: 1;  /* Default 1 */
+    flex-basis: 20%;
+    align-self: flex-end;
+}
+
+.box:nth-child(3) {
+    background-color: rgb(67, 42, 165);
+    border: 1px solid rgb(128, 0, 0);
+    min-height: 200px;
+    order: 5;
+    flex-grow: 1;
+    flex-shrink: 1;  /* Default 1 */
+    flex-basis: 30%;
+}
+
+.box:nth-child(4) {
+    background-color: rgb(42, 151, 165);
+    border: 1px solid rgb(128, 0, 0);
+    min-height: 200px;
+    order: 1;
+}
+
+.box:nth-child(5) {
+    background-color: rgb(165, 42, 136);
+    border: 1px solid rgb(128, 0, 0);
+    min-height: 200px;
+    order: 0;
+    order: 6;
+}
+
+.box:nth-child(6) {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(128, 0, 0);
+    min-height: 200px;
+    order: 3;
+}
+
+article {
+    min-height: 500px;
+    background: rgb(82, 183, 183);
+    display: flex;
+
+    flex-direction: row;   /* Comportamento di deafault */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+
+    /* Flex wrap */
+     flex-wrap: wrap;   /* Più utile */
+    /* flex-wrap: wrap-reverse; */
+
+    /* Justify content */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: center;  */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    justify-content: space-evenly;
+
+    /* align-items: stretch;    Valore di default delle flexbox */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+     align-items: center; 
+    /* align-items: baseline; */
+
+    /* align-content: flex-start; */
+    /* align-content: flex-end; */
+    /* align-content: center; */
+     align-content: stretch;  /* Default */
+     /* align-content: space-between; */
+     /* align-content: space-around; */
+     align-content: space-evenly;
+}

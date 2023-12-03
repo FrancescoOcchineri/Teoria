@@ -1,0 +1,130 @@
+/* CSS ESTERNO */
+
+/*SELETTORE UNIVERSALE*/
+*{
+font-family: 'Courier New', Courier, monospace;
+}
+
+/*SELETTORE DI TIPO O DI TAG O DI BASE
+p {
+color:aquamarine; 
+font-style: italic;
+font-weight: bold;
+}*/
+
+/*SELETTORE DI GRUPPO*/
+p, h3 {
+    text-transform: uppercase;
+}
+
+/*SELETTORE ID*/
+#rosso {
+    color: red;
+    background-color: blueviolet;
+}
+
+#abc {
+    text-decoration: underline;
+}
+
+/*SELETTORE DI TIPO CLASS*/
+.primary {
+    color:green;
+    text-decoration: line-through;
+}
+
+/*LA PRIORITà MASSIMA CE L'HA IL SELETTORE ID (A PARITà DI REGOLE, IN CASO DI CONFLITTI*/
+
+/*SELETTORE DEI DISCENDENTI*/
+article p {
+    color:yellow;
+}
+
+/*SELETTORE DI FIGLI DIRETTI (NON PRESENTI IN ALTRI CONTENITORI*/
+main > article h1 + p {
+    color: blue;
+    background-color:yellow;
+}
+
+/*SELETTORE DI FRATELLI ADIACENTI (DEVONO ESSERE UNO DOPO L'ALTRO SULLE RIGHE IN HTML)*/
+h1 + a {
+    font-weight: bold;
+    text-decoration: line-through;
+}
+
+/*SELETTORE IN BASE AD UN ATTRIBUTO (TUTTI I TAG A CON NOME TITLE*/
+a[title] {
+    color: rgb(7, 210, 7);
+}
+
+a[title="abc"] {
+    color: bisque;
+}
+
+a {
+    color: brown;
+}
+
+/*CAMBIO COLORE QUANDO PASSO CON IL CURSORE SOPRA LA SCRITTA*/
+a:hover {
+    color: antiquewhite;
+    background-color: cornflowerblue;
+    text-decoration: none;
+}
+
+/*FIRSTCHILD PRENDE IL PRIMO CONTENITORE CHE INCONTRA (IN QUESTO CASO IL PRIMO DIV)*/
+article:first-child {
+border: 1px solid red;
+}
+
+article:last-child {           
+    border: 1px solid blue;
+    }
+
+    /*NTH CHILD Possibilità di indicare quale numericamente modificare*/
+    article:nth-child(2) {
+        border: solid pink;
+    }
+
+    /*2n+1 espressione, mi prende solo i dispari (es. 2x0+1=1, 2x1+1=3)*/
+        article:nth-child(2n+1) {
+border: 3px solid gold;
+    }
+
+    /*NOT prende tutti gli article che non hanno la classe test*/
+    article:not(.test) {
+        border: 5px solid black
+    }
+
+    /*PSEUDO ELEMENTI*/
+
+/*FIRST LINE COLORO LA PRIMA RIGA*/
+    section p::first-line {
+        color: brown;
+        text-transform: lowercase;
+    }
+
+    /*FIRST LETTER COLORO LA PRIMA LETTERA*/
+    section p::first-letter {
+        color: green;
+        font-weight: bold;
+        font-size: large;
+    }
+
+/*SELECTION PER CAMBIARE COLORO QUANDO SELEZIONO UNA PORZIONE DI TESTO*/
+section p::selection {
+    background-color: yellow;
+}
+
+/*BEFORE E AFTER AGGIUNGERE QUALCOSA PRIMA E DOPO DI UN ELEMENTO*/
+section h1::before {
+    content: "-";
+    font-weight: bold;
+    color: grey;
+}
+
+section h1::after {
+    content: "-";
+    font-weight: bold;
+    color: grey;
+}

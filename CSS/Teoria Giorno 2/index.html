@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Table</h1>
+
+    <table border="1">
+        <caption>Mia Tab</caption>
+        <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Città</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>Mario</td>
+        <td>Rossi</td>
+        <td>Roma</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+        <td colspan="2">Tot</td>
+        <td>1</td>
+    </tr>
+</tfoot>
+    </table>
+
+    <hr />
+
+    <h1>Form</h1>
+<!--Se scrivo method="get" c'è il rischio che trapelino dati, perchè vengono scritti sul link-->
+    <form method="post" action="miapaginadelserver.php" autocomplete="on">
+        <!--autocomplete per autocompilare le caselle-->
+        <fieldset>
+            <legend>Mio Form</legend>
+            <label for="mionome">Nome:</label>
+            <input type="text" name="nome" id="mionome" autofocus minlength="10">
+            <!--autofocus per selezionare automaticamente la scrittura in una una casella (qui input)-->
+            <!--minlegth per inserire un numero minimo di caratteri in una casella-->
+            <label for="miocognome">Cognome:</label>
+            <input type="text" name="cognome" id="miocognome" placeholder="Rossi">
+            <!--placeholder per segnaposto, mi suggerisce nella casella cosa scrivere-->
+            <label for="miaeta">Età:</label>
+            <input type="number" name="Età" id="miaeta" value="18">
+            <!--value autocompilo una casella, che può essere modificata-->
+            <label for="miaemail">Email:</label>
+            <input type="email" name="email" id="miaemail" disabled>
+            <!--disabled per disabilitare una casella-->
+            <label for="miapassword">Password:</label>
+            <input type="password" name="password" id="miapassword" required>
+            <!--required per rendere obbligatoria la compilazione di una casella-->
+            <label for="miadatanascita">Data di Nascita:</label>
+            <input type="date" name="datanascita" id="miadatanascita">
+            <label for="mieilinguaggi">Linguaggi:</label>
+            <select name="linguaggi" id="mieilinguaggi">
+                <optgroup label="Front End">
+                <option value="Javascript">Javascript</option>
+                <option>React</option>
+            </optgroup>
+            <!--optgroup tag contenitore per raggruppare le mie scelte-->
+            <optgroup label="Back End">
+            <option>Php</option>
+                <option>Laravel</option>
+            </optgroup>  
+            </select>
+            <br />
+
+            <textarea name="note" placeholder="Inserisci note..." rows="5" cols="25">
+
+            </textarea>
+            <!--textarea per inserire una casella note, su cui scrivere, "rows" e "cols" sono rispettivamente righe e colonne-->
+           <button type="submit">Invio</button>
+           <button type="reset">Reset</button>
+            </fieldset>
+        </form>
+<hr />
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.9765399536295!2d12.4773935!3d41.871851199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f6173fb8c8ea7%3A0x1a413c9507f97391!2sEPICODE!5e0!3m2!1sit!2sit!4v1698144885451!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
+<iframe src="https://learn.epicode.com/course/29/curriculum/8506" width="500" height="500"></iframe>
+<!--iframe per aggiungere contenitori di siti-->
+    
+<hr />
+
+<!--COME VENIVA COMPILATO PRIMA CON DIV GENERICI-->
+
+<div id="header">
+    <div id="nav">
+    <!--Logo e menu di navigazione-->
+    </div>
+</div>
+<div id="main">
+<!--Contenuto della pagina-->
+</div>
+<div id="footer">
+    <!--Riferimento ed indirizzi della pagina-->
+</div>
+
+<!--COME VIENE FATTO ORA-->
+
+<!--Blog-->
+<header>
+     <!--Uso direttamente tag semantici senza div-->
+     </header>
+<nav>
+    <!--Nav: Logo e menu di navigazione-->
+    </nav>
+<main>
+<!--Main: Contenuto della pagina-->
+<article>
+<!--Article: Contenuto indipendente della pagina-->
+</article>
+<aside>
+    <!--Aside: Contenuto secondario della pagina-->
+</aside>
+<section>
+    <!--Section: Contenuto principale della pagina-->
+</section>
+<aside>
+    <!--Aside: Contenuto secondario della pagina-->
+</aside>
+</main>
+<footer>
+    <!--Footer: Riferimento ed indirizzi della pagina-->
+</footer>
+</body>
+</html>

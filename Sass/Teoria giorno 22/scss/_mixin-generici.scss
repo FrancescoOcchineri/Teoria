@@ -1,0 +1,53 @@
+@mixin nomeMixin() {
+    color: whitesmoke;
+    text-align: center;
+}
+
+@mixin paramMixin($primaryFont, $weight) {
+    font-size: $primaryFont;
+    font-weight: $weight;
+}
+
+// @mixin abc($prop, $value)   con il doppio slash non mi da errore //    
+@mixin backGMixin($prop, $value) {
+      @if $prop == 'color' {
+        background-#{$prop}: $value;
+        #{$prop}: darken($value, 25%);
+    } @if $prop == 'image' {
+        background-#{$prop}: $value;
+        background-repeat: no-repeat;
+        background-size: contain;
+    } @else {
+        // Non fare nulla
+    }
+}
+
+// $padding: 0, 0.25em, 0.5em, 1em, 1.5em, 3em;
+$num: 0,1,2,3,4,5;
+@each $pad in $num {
+    .p-#{$pad} {                    // .p sarà la classe, ciclando mi darà .p-1, .p-2 ecc..
+        padding: #{$pad} + 'em';   // qui avrò il padding: valore del ciclo (1) + em
+    }                             // dunque avrò padding: 1em, padding: 2em ecc..
+}
+
+$color: ('color-primary': $color-primary, 'color-secondary': $color-secondary);
+// sarebbe come fare in js un obj es. let obj = {'proprietà: qualcosa
+@each $key,$val in $color {
+    .bg-#{$key} {                 // la key sarebbe la proprietà in $color (es. 'color-primary'), dunque creo la classe ad es. .bg-color-primary
+        background-color: $val;  // $val corrisponde alla variabile creata, in questo caso $color-primary: red
+    }
+}
+
+@for $i from 0 to 5 {
+    .m-#{$i} {
+        margin: #{$i} + 'em';
+    }
+}
+
+$i: 0;
+@while ($i <= 5) {
+    .box-#{$i} {
+        border: $i+px solid black;
+    }
+    $i: $i +1;
+}

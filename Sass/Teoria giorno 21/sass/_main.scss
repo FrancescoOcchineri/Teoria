@@ -1,0 +1,65 @@
+/* Codice per Main */
+
+/* CLASSICO */
+
+/* main {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main p {
+    text-align: center;
+    color: red;
+}
+
+main a:hover {
+    background-color: violet;
+} */
+
+/* NESTING con annidamento */
+
+@mixin miaRegola ($color, $align) {
+    text-align: $align;
+    color: $color;
+}
+
+@mixin bkMix($prop, $val) {
+    background-#{$prop} : $val;
+}
+
+main {
+    border: 1px solid black;
+    padding: 10px;
+
+    @include bkMix("color", lightgrey);
+    a {
+        text-decoration: none;
+        &:hover {
+            background-color: violet;
+        }
+    }
+    p {
+        /* text-align: center;
+        color: red; */
+        @include miaRegola(blue, left);
+        font-size: 1.2em;
+    }
+    /*a:hover {
+        background-color: violet;
+    }*/
+    span {
+        font-weight: bold;
+        color: seagreen;
+    }
+    h1 {
+        /* text-align: center;
+        color: red; */
+        @include miaRegola(green, center);
+        text-decoration: underline;
+    }
+}
+
