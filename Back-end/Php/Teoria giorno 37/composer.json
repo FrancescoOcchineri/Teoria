@@ -1,0 +1,17 @@
+{
+    "name": "utente/teoria-giorno-37",
+    "autoload": {
+        "psr-4": {
+            "Utente\\TeoriaGiorno37\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "FrancescoOcchineri",
+            "email": "occhinerifrancesco@gmail.com"
+        }
+    ],
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}
